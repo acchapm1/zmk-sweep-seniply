@@ -11,12 +11,12 @@
 
 // Layer definitions
     #define BASE 0
-    #define SYM 1
-    #define EXT 2
-    #define FNC 3
-    #define SYM2 4
-    #define ACCENT 5
-		#define SETTINGS 6
+    #define NUM 1
+    #define SYM 2
+    #define MOUSE 3
+    #define FUNC 4
+    #define MACRO 5
+	#define SETTINGS 6
 // -----------------
 
 &mt {
@@ -47,13 +47,13 @@
         combo_accent {
             timeout-ms = <300>;
             key-positions = <32 33>;
-            bindings = <&mo ACCENT>;
+            bindings = <&mo MACRO>;
         };
 				// internal-left & external-right thumb keys
 				combo_sym2 {
 						timeout-ms = <200>;
 						key-positions = <31 33>;
-						bindings = <&mo SYM2>;
+						bindings = <&mo FUNC>;
 				};
 				// both left thumb keys
 				combo_settings {
@@ -72,7 +72,7 @@
 		&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
 		&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_OGRV
 		&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
-             &mo EXT &mt LSHIFT SPACE           &kp SPACE &sl SYM
+             &mo SYM &mt LSHIFT SPACE           &kp SPACE &sl NUM
 		>;
 		};
 
@@ -82,7 +82,7 @@
 		&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 		&kp IT_LESS &kp IT_PERC &kp IT_LPAR &kp IT_LBRC &kp IT_LBKT  &kp IT_EQL &kp IT_QUES &kp IT_SQUOT &kp IT_MINUS &kp IT_AST
 		&kp IT_GREAT &kp IT_USD &kp IT_RPAR &kp IT_RBRC &kp IT_RBKT 	&kp IT_AT &kp IT_EXCL &kp IT_DQUOT &kp IT_PLUS &kp IT_FSLH
-					                                        &mo FNC  &mo SYM2       &trans &trans
+					                                        &mo MOUSE  &mo FUNC       &trans &trans
 		>;
 		};
 
@@ -92,7 +92,7 @@
 		&kp ESC  &trans &trans  &trans  &trans    			        &kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 		&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 		&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-					                        &trans &kp LCTRL    &kp ENTER  &mo FNC 
+					                        &trans &kp LCTRL    &kp ENTER  &mo MOUSE 
 		>;
 		};
 
